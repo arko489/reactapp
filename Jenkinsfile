@@ -42,7 +42,7 @@ pipeline {
         }
        stage("Quality Gate") {
             steps {
-               // qualityGateUrl=18.224.155.110:9000/quality_gates/show/116
+                qualityGateUrl=18.224.155.110:9000/quality_gates/show/116
               timeout(time: 1, unit: 'HOURS') {
                 waitForQualityGate abortPipeline: true
               }
